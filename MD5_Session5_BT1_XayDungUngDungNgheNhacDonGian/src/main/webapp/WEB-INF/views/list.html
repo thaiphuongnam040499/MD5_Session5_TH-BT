@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+  <thead>
+  <tr>
+    <th>STT</th>
+    <th>SongName</th>
+    <th>artistName</th>
+    <th>kindOfMusic</th>
+    <th>urlSong</th>
+  </tr>
+
+  </thead>
+  <tbody th:each="song,songStat:${listSong}">
+  <tr>
+    <td th:text="songStat + 1 "></td>
+  </tr>
+  <tr>
+    <td th:text="${song.getSongName()}"></td>
+  </tr>
+  <tr>
+    <td th:text="${song.getArtistName()}"></td>
+  </tr>
+  <tr>
+    <td th:text="${song.getKindOfMusic()}"></td>
+  </tr>
+  <tr>
+    <td th:text="${song.getUrlSong()}"></td>
+  </tr>
+  </tbody>
+</table>
+</body>
+</html>
