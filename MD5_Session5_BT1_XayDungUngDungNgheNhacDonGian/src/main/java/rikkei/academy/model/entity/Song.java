@@ -7,13 +7,13 @@ import javax.persistence.*;
 public class Song {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private Long id;
     private String songName;
     private String artistName;
     private String kindOfMusic;
     private String urlSong;
 
-    public Song(long id, String songName, String artistName, String kindOfMusic, String urlSong) {
+    public Song(Long id, String songName, String artistName, String kindOfMusic, String urlSong) {
         this.id = id;
         this.songName = songName;
         this.artistName = artistName;
@@ -24,11 +24,11 @@ public class Song {
     public Song() {
     }
 
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
